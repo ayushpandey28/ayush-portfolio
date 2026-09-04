@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e0e13" />
+      <stop offset="100%" stop-color="#14141c" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191923" />
+      <stop offset="100%" stop-color="#121219" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#242432" opacity="0.6" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+  <rect width="800" height="450" fill="url(#grid)" />
+
+  <!-- Subtle glow -->
+  <circle cx="400" cy="200" r="180" fill="#6366f1" opacity="0.08" filter="blur(40px)" />
+
+  <!-- Window Container -->
+  <rect x="60" y="45" width="680" height="360" rx="12" fill="url(#cardGrad)" stroke="#262636" stroke-width="1.5" />
+
+  <!-- Window Header -->
+  <rect x="60" y="45" width="680" height="42" rx="12" fill="#171720" />
+  <rect x="60" y="75" width="680" height="12" fill="#171720" />
+  <line x1="60" y1="87" x2="740" y2="87" stroke="#262636" stroke-width="1" />
+
+  <!-- Window Controls -->
+  <circle cx="84" cy="66" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="102" cy="66" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="120" cy="66" r="5" fill="#10b981" opacity="0.8" />
+  <text x="400" y="70" text-anchor="middle" font-family="monospace" font-size="12" fill="#71717a">tigerpdf.app - dashboard</text>
+
+  <!-- Inner Content -->
+  <!-- PDF Badge / Icon -->
+  <g transform="translate(110, 130)">
+    <rect x="0" y="0" width="70" height="85" rx="8" fill="#1e1e2c" stroke="#6366f1" stroke-width="1.5" />
+    <path d="M18 20 H42 M18 35 H52 M18 50 H36" stroke="#818cf8" stroke-width="2.5" stroke-linecap="round" />
+    <rect x="18" y="62" width="34" height="14" rx="3" fill="#6366f1" />
+    <text x="35" y="72" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="8" fill="#ffffff">PDF</text>
+  </g>
+
+  <!-- Project Title & Description -->
+  <text x="210" y="160" font-family="sans-serif" font-weight="700" font-size="28" fill="#f4f4f5">TigerPDF</text>
+  <text x="210" y="190" font-family="sans-serif" font-size="14" fill="#a1a1aa">Full-Stack PDF Management &amp; Processing Platform</text>
+
+  <!-- Features Grid -->
+  <g transform="translate(110, 245)">
+    <!-- Feature 1 -->
+    <rect x="0" y="0" width="165" height="52" rx="8" fill="#161622" stroke="#262636" stroke-width="1" />
+    <circle cx="22" cy="26" r="10" fill="#222234" />
+    <path d="M18 26 L21 29 L26 23" stroke="#10b981" stroke-width="1.8" fill="none" stroke-linecap="round" />
+    <text x="40" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#e4e4e7">Auth &amp; Users</text>
+    <text x="40" y="38" font-family="sans-serif" font-size="10" fill="#71717a">Secure JWT</text>
+
+    <!-- Feature 2 -->
+    <rect x="185" y="0" width="165" height="52" rx="8" fill="#161622" stroke="#262636" stroke-width="1" />
+    <circle cx="207" cy="26" r="10" fill="#222234" />
+    <path d="M203 26 L206 29 L211 23" stroke="#10b981" stroke-width="1.8" fill="none" stroke-linecap="round" />
+    <text x="225" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#e4e4e7">REST APIs</text>
+    <text x="225" y="38" font-family="sans-serif" font-size="10" fill="#71717a">File Endpoints</text>
+
+    <!-- Feature 3 -->
+    <rect x="370" y="0" width="165" height="52" rx="8" fill="#161622" stroke="#262636" stroke-width="1" />
+    <circle cx="392" cy="26" r="10" fill="#222234" />
+    <path d="M388 26 L391 29 L396 23" stroke="#10b981" stroke-width="1.8" fill="none" stroke-linecap="round" />
+    <text x="410" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#e4e4e7">Dashboard</text>
+    <text x="410" y="38" font-family="sans-serif" font-size="10" fill="#71717a">Subscriptions</text>
+  </g>
+
+  <!-- Bottom Tech Tags -->
+  <g transform="translate(110, 325)">
+    <rect x="0" y="0" width="70" height="24" rx="6" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.8" />
+    <text x="35" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#818cf8">React.js</text>
+
+    <rect x="80" y="0" width="70" height="24" rx="6" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.8" />
+    <text x="115" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#818cf8">Node.js</text>
+
+    <rect x="160" y="0" width="85" height="24" rx="6" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.8" />
+    <text x="202" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#818cf8">REST APIs</text>
+  </g>
+</svg>

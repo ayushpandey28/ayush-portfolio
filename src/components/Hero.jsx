@@ -218,6 +218,7 @@ export default function Hero() {
 
               <a
                 href={profile.resume}
+                download="Ayush_Pandey_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-text-secondary transition-colors hover:border-border-hover hover:bg-surface-hover hover:text-text-primary"

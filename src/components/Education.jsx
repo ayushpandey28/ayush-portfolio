@@ -3,7 +3,7 @@ import { GraduationCap, MapPin, Calendar } from "lucide-react";
 
 /* Education information */
 const education = {
-  degree: "B.Tech — Computer Science & Engineering",
+  degree: "Bachelor of Technology in Computer Science and Engineering",
   institution: "KIET Group of Institutions, Ghaziabad",
   year: "2024 – 2028",
   cgpa: "7.49 / 10",

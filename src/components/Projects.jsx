@@ -18,9 +18,9 @@ export default function Projects() {
           </h2>
 
           <p className="mt-3 max-w-2xl text-text-secondary">
-            A selection of projects demonstrating my experience with
-            full-stack development, REST APIs, SQL, data analysis, and
-            practical problem solving.
+            Full-stack web applications demonstrating my experience with
+            React, Node.js, Next.js, Express, REST APIs, and modern development
+            workflows.
           </p>
 
           <div className="mt-3 h-1 w-12 rounded-full bg-accent" />

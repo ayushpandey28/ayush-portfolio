@@ -1,53 +1,58 @@
 # Ayush Pandey — Portfolio
 
-A modern, responsive personal portfolio website showcasing my projects, technical skills, education, certifications, and software development experience.
+A modern, responsive developer portfolio built to showcase my software development projects, technical skills, education, certifications, and experience.
 
-Built with React, Vite, Tailwind CSS, and Framer Motion.
+The portfolio focuses on a clean developer-oriented interface, responsive design, smooth animations, and easy access to projects, resume, and contact information.
 
----
+## 🌐 Live Portfolio
 
-## 🚀 Live Portfolio
-
-**Website:** https://ayushpandey.dev
+**Website:** [ayushpandey.dev](https://ayushpandey.dev)
 
 ---
 
-## ✨ Features
+## ✨ Highlights
 
-- Responsive design for desktop, tablet, and mobile
-- Modern dark developer-focused UI
-- Smooth scroll navigation
-- Animated sections using Framer Motion
-- Project showcase with technology tags
-- Technical skills section
+- Responsive design across desktop, tablet, and mobile
+- Modern dark-themed developer interface
+- Smooth scrolling and section navigation
+- Motion-based UI animations
+- Project showcase with technology details
+- Technical skills and development tools
 - Education and certifications
-- Contact form with email integration
-- GitHub and LinkedIn integration
-- Resume download
+- Working contact form with email integration
+- GitHub, LinkedIn, and LeetCode links
+- Resume preview and download
 - Scroll-to-top navigation
-- SEO-friendly HTML metadata
+- SEO-friendly page metadata
+- Accessible and responsive UI components
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React
-- JavaScript
-- Tailwind CSS v4
-- Framer Motion
-- Lucide React
+
+- **React** — UI development
+- **JavaScript (ES6+)** — Application logic
+- **Tailwind CSS v4** — Styling and responsive layouts
+- **Framer Motion** — Animations and transitions
+- **Lucide React** — Interface icons
 
 ### Development Tools
-- Vite
-- Git
-- GitHub
-- VS Code
-- Oxlint
+
+- **Vite** — Development server and build tool
+- **Git** — Version control
+- **GitHub** — Source code hosting
+- **VS Code** — Development environment
+- **Oxlint** — Code quality and linting
+
+### Deployment
+
+- **Vercel**
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 ayush-portfolio/
