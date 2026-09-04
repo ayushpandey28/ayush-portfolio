@@ -6,7 +6,7 @@ The portfolio focuses on a clean developer-oriented interface, responsive design
 
 ## 🌐 Live Portfolio
 
-**Website:** [ayushpandey.dev](https://ayushpandey.dev)
+**Website:** [ayush-portfolio]([https://ayushpandey.dev](https://ayush-portfolio-lyart-eight.vercel.app/))
 
 ---
 
