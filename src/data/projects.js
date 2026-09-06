@@ -25,7 +25,7 @@ const projects = [
     image: "/images/projects/tigerresume.svg",
     technologies: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com/ayushpandey28/TigerResume.git",
-    live: "#",
+    live: "https://tiger-resume.vercel.app/",
   },
   
 ];
