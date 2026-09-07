@@ -3,6 +3,7 @@ import { Trophy } from "lucide-react";
 
 const achievements = [
   "Solved 200+ Data Structures & Algorithms problems on LeetCode and other competitive coding platforms.",
+  "Reliance Foundation Undergraduate Scholarship — 2024–Present | Selected Scholar",
 ];
 
 export default function Achievements() {
