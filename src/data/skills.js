@@ -1,33 +1,33 @@
 const skills = [
   {
-    category: "Programming Languages",
-    items: ["C++", "C", "Python"],
+    category: "Languages",
+    items: ["C++", "Python", "JavaScript", "C", "SQL"],
   },
   {
     category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React", "React Native"],
+    items: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "REST APIs"],
+    items: ["Node.js", "Express.js", "REST APIs"],
   },
   {
-    category: "Databases & Data Tools",
-    items: ["SQL", "Firebase", "Tableau", "Excel"],
+    category: "Databases",
+    items: ["MongoDB", "SQL", "Firebase"],
   },
   {
-    category: "Core CS Concepts",
+    category: "Core CS",
     items: [
       "Data Structures & Algorithms",
-      "Object-Oriented Programming (OOPs)",
+      "Object-Oriented Programming",
       "DBMS",
       "Operating Systems",
       "Computer Networks",
     ],
   },
   {
-    category: "Developer Tools",
-    items: ["Git", "GitHub"],
+    category: "Tools & Platforms",
+    items: ["Git", "GitHub", "VS Code", "Tableau"],
   },
 ];
 

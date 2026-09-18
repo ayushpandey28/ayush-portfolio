@@ -1,125 +1,8 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail, CircleDot } from "lucide-react";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  LeetCodeIcon,
-} from "./BrandIcons";
+import { ArrowDown, Download, ExternalLink } from "lucide-react";
+import { GithubIcon, LinkedinIcon, LeetCodeIcon } from "./BrandIcons";
 import profile from "../data/profile";
-
-function CodeCard() {
-  return (
-    <div className="w-full max-w-md rounded-xl border border-border bg-surface-card p-5 shadow-2xl shadow-black/30">
-      <div className="mb-4 flex items-center gap-2">
-        <span className="h-3 w-3 rounded-full bg-red-500/70" />
-        <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
-        <span className="h-3 w-3 rounded-full bg-green-500/70" />
-
-        <span className="ml-3 font-mono text-xs text-text-muted">
-          developer.js
-        </span>
-      </div>
-
-      <pre className="font-mono text-sm leading-relaxed">
-        <code>
-          <span className="text-accent">const</span>{" "}
-          <span className="text-blue-400">developer</span>{" "}
-          <span className="text-text-muted">=</span> {"{\n"}
-
-          {"  "}
-          <span className="text-emerald-400">name</span>
-          <span className="text-text-muted">:</span>{" "}
-          <span className="text-amber-400">"Ayush Pandey"</span>
-          <span className="text-text-muted">,</span>
-          {"\n"}
-
-          {"  "}
-          <span className="text-emerald-400">role</span>
-          <span className="text-text-muted">:</span>{" "}
-          <span className="text-amber-400">
-            "Full Stack Developer"
-          </span>
-          <span className="text-text-muted">,</span>
-          {"\n"}
-
-          {"  "}
-          <span className="text-emerald-400">stack</span>
-          <span className="text-text-muted">:</span>{" "}
-          <span className="text-amber-400">
-            "React + Node.js"
-          </span>
-          <span className="text-text-muted">,</span>
-          {"\n"}
-
-          {"  "}
-          <span className="text-emerald-400">focus</span>
-          <span className="text-text-muted">:</span>{" "}
-          <span className="text-amber-400">
-            "Software Engineering"
-          </span>
-          {"\n"}
-
-          {"};"}
-        </code>
-      </pre>
-    </div>
-  );
-}
-
-const stagger = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const fadeUp = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
-const floatingBadges = [
-  {
-    label: "React",
-    className:
-      "absolute -top-4 right-4 sm:right-8 lg:-right-2",
-    y: [0, -6, 0],
-    duration: 4,
-  },
-  {
-    label: "Node.js",
-    className:
-      "absolute -bottom-3 left-4 sm:left-8 lg:-left-4",
-    y: [0, 6, 0],
-    duration: 5,
-  },
-  {
-    label: "C++",
-    className:
-      "absolute -left-2 top-1/3 hidden sm:inline-flex lg:-left-12",
-    y: [0, -5, 0],
-    duration: 4.5,
-  },
-  {
-    label: "SQL",
-    className:
-      "absolute -right-2 bottom-1/4 hidden sm:inline-flex lg:-right-8",
-    y: [0, 5, 0],
-    duration: 3.5,
-  },
-];
+import projects from "../data/projects";
 
 const socials = [
   {
@@ -137,83 +20,59 @@ const socials = [
     href: profile.leetcode,
     label: "LeetCode",
   },
-  {
-    icon: Mail,
-    href: `mailto:${profile.email}`,
-    label: "Email",
-  },
+  // {
+  //   icon: Mail,
+  //   href: `mailto:${profile.email}`,
+  //   label: "Email",
+  // },
 ];
 
 export default function Hero() {
+  const featured = projects[0]; // TigerResume
+
   return (
-    <section
-      id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-20"
-    >
-      {/* Background Glow */}
-      <div className="pointer-events-none absolute left-1/2 top-1/4 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-accent/[0.04] blur-[120px]" />
-
-      <div className="mx-auto w-full max-w-6xl section-padding">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-
-          {/* Left Content */}
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            animate="show"
-            className="order-2 lg:order-1"
-          >
-            {/* Availability Badge */}
-            <motion.div variants={fadeUp} className="mb-6">
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-card px-4 py-1.5 text-xs font-medium text-text-secondary">
-                <CircleDot
-                  size={12}
-                  className="text-emerald-400"
-                />
-                Open to Software Development Internships
+    <section id="home" className="relative pt-28 pb-20 sm:pt-36 sm:pb-28">
+      <div className="mx-auto max-w-6xl section-padding">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-12">
+          {/* Left Introduction */}
+          <div className="lg:col-span-7">
+            {/* Status Pill */}
+            <div className="inline-flex items-center gap-2 rounded-[6px] border border-[#292E38] bg-[#151922] px-3 py-1.5 text-xs text-[#A7ACB8]">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#22C55E] opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#22C55E]"></span>
               </span>
-            </motion.div>
 
-            {/* Heading */}
-            <motion.h1
-              variants={fadeUp}
-              className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
-            >
-              Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-accent to-accent-hover bg-clip-text text-transparent">
-                Ayush Pandey.
+              <span className="font-mono text-xs">
+                Available for Software Development Internships
               </span>
-            </motion.h1>
+            </div>
 
-            {/* Role */}
-            <motion.p
-              variants={fadeUp}
-              className="mt-3 text-xl font-medium text-text-secondary sm:text-2xl"
-            >
-              Full Stack Developer
-            </motion.p>
+            {/* Main Heading */}
+            <h1 className="mt-6 text-4xl font-bold tracking-tight text-[#E8EAF0] sm:text-5xl lg:text-6xl leading-[1.1]">
+              Hi, I'm <span className="text-[#E8EAF0]">Ayush Pandey</span>.
+            </h1>
 
-            {/* Description */}
-            <motion.p
-              variants={fadeUp}
-              className="mt-5 max-w-lg text-base leading-relaxed text-text-secondary sm:text-lg"
-            >
-              I build end-to-end web applications with React and
-              Node.js, backed by a strong foundation in C++, Python,
-              SQL, and Data Structures & Algorithms.
-            </motion.p>
+            {/* Role & Summary */}
+            <p className="mt-4 text-base font-mono text-[#F59E0B] sm:text-lg">
+              Full Stack Developer · B.Tech CSE @ KIET
+            </p>
 
-            {/* CTA Buttons */}
-            <motion.div
-              variants={fadeUp}
-              className="mt-8 flex flex-wrap gap-4"
-            >
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#A7ACB8] sm:text-base">
+              Building practical, production-ready web applications with
+              React, Node.js, Express, and MongoDB. Passionate about clean
+              backend architectures and solving complex problems with Data
+              Structures &amp; Algorithms.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+                className="inline-flex items-center gap-2 rounded-[6px] bg-[#F59E0B] px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#0F1115] transition-all hover:bg-[#D97706] hover:-translate-y-0.5"
               >
-                <ArrowDown size={16} />
-                View My Work
+                <span>View Projects</span>
+                <ArrowDown size={14} />
               </a>
 
               <a
@@ -221,86 +80,147 @@ export default function Hero() {
                 download="Ayush_Pandey_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-text-secondary transition-colors hover:border-border-hover hover:bg-surface-hover hover:text-text-primary"
+                className="inline-flex items-center gap-2 rounded-[6px] border border-[#292E38] bg-[#151922] px-5 py-2.5 text-xs font-medium uppercase tracking-wider text-[#E8EAF0] transition-all hover:border-[#3E4656] hover:bg-[#1B2028] hover:-translate-y-0.5"
               >
-                <Download size={16} />
-                Download Resume
+                <Download size={14} />
+                <span>Download Resume</span>
               </a>
-            </motion.div>
+            </div>
 
             {/* Social Links */}
-            <motion.div
-              variants={fadeUp}
-              className="mt-8 flex items-center gap-4"
-            >
-              {socials.map(
-                ({ icon: Icon, href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target={
-                      label === "Email"
-                        ? undefined
-                        : "_blank"
-                    }
-                    rel={
-                      label === "Email"
-                        ? undefined
-                        : "noopener noreferrer"
-                    }
-                    aria-label={label}
-                    title={label}
-                    className="rounded-lg border border-border p-2.5 text-text-muted transition-colors hover:border-border-hover hover:bg-surface-hover hover:text-text-primary"
-                  >
-                    <Icon size={18} />
-                  </a>
-                )
-              )}
-            </motion.div>
-          </motion.div>
-
-          {/* Right Code Card */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.95,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{
-              duration: 0.7,
-              delay: 0.3,
-              ease: "easeOut",
-            }}
-            className="relative order-1 flex justify-center lg:order-2"
-          >
-            <CodeCard />
-
-            {/* Floating Technology Badges */}
-            {floatingBadges.map(
-              ({
-                label,
-                className,
-                y,
-                duration,
-              }) => (
-                <motion.span
+            <div className="mt-6 flex items-center gap-2.5">
+              {socials.map(({ icon: Icon, href, label }) => (
+                <a
                   key={label}
-                  animate={{ y }}
-                  transition={{
-                    duration,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className={`inline-flex items-center rounded-full border border-border bg-surface-card px-3 py-1 text-xs font-medium text-text-secondary ${className}`}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  title={label}
+                  className="rounded-[6px] border border-[#292E38] bg-[#151922] p-2 text-[#737A89] transition-colors hover:border-[#3E4656] hover:text-[#E8EAF0]"
                 >
-                  {label}
-                </motion.span>
-              )
-            )}
-          </motion.div>
+                  <Icon size={16} />
+                </a>
+              ))}
+            </div>
+
+            {/* Real Stats Row */}
+            <div className="mt-10 grid grid-cols-3 gap-4 border-t border-[#292E38] pt-6">
+              <div>
+                <div className="font-mono text-xl font-bold text-[#E8EAF0]">
+                  150+
+                </div>
+                <div className="text-xs text-[#737A89]">
+                  LeetCode Solved
+                </div>
+              </div>
+
+              <div>
+                <div className="font-mono text-xl font-bold text-[#E8EAF0]">
+                  2+
+                </div>
+                <div className="text-xs text-[#737A89]">
+                  Shipped Projects
+                </div>
+              </div>
+
+              <div>
+                <div className="font-mono text-xl font-bold text-[#22C55E]">
+                  2028
+                </div>
+                <div className="text-xs text-[#737A89]">
+                  Graduation Year
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Showcase: Real Featured Project Card */}
+          <div className="lg:col-span-5">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="overflow-hidden rounded-lg border border-[#292E38] bg-[#151922] transition-all hover:border-[#3E4656]"
+            >
+              {/* Clean Header */}
+              <div className="flex items-center justify-between border-b border-[#292E38] bg-[#151922] px-4 py-2.5">
+                <span className="flex items-center gap-1.5 font-mono text-xs text-[#A7ACB8]">
+                  <span className="text-[#F59E0B]">//</span>
+                  <span>Featured Work</span>
+                </span>
+
+                <span className="rounded border border-[#292E38] bg-[#1B2028] px-2 py-0.5 font-mono text-[10px] text-[#A7ACB8]">
+                  Production
+                </span>
+              </div>
+
+              {/* Project Image Banner */}
+              <div className="relative aspect-video w-full overflow-hidden border-b border-[#292E38] bg-[#0F1115]">
+                <img
+                  src={featured.image}
+                  alt={featured.title}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              {/* Project Info */}
+              <div className="p-5">
+                <div className="flex items-baseline justify-between">
+                  <h3 className="text-base font-semibold text-[#E8EAF0]">
+                    {featured.title}
+                  </h3>
+
+                  <span className="font-mono text-xs text-[#737A89]">
+                    Full Stack
+                  </span>
+                </div>
+
+                <p className="mt-2 text-xs leading-relaxed text-[#A7ACB8]">
+                  {featured.description}
+                </p>
+
+                {/* Tech Tags */}
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {featured.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded border border-[#292E38] bg-[#1B2028] px-2 py-0.5 font-mono text-[11px] text-[#A7ACB8]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Card Actions */}
+                <div className="mt-5 flex items-center gap-3 border-t border-[#292E38] pt-3">
+                  {featured.github && (
+                    <a
+                      href={featured.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-[#A7ACB8] transition-colors hover:text-[#E8EAF0]"
+                    >
+                      <GithubIcon size={14} />
+                      <span>Source Code</span>
+                    </a>
+                  )}
+
+                  {featured.live && (
+                    <a
+                      href={featured.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-auto inline-flex items-center gap-1 text-xs font-medium text-[#F59E0B] transition-colors hover:text-[#D97706]"
+                    >
+                      <span>Live Platform</span>
+                      <ExternalLink size={12} />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

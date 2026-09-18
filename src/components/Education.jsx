@@ -1,74 +1,66 @@
-import { motion } from "framer-motion";
-import { GraduationCap, MapPin, Calendar } from "lucide-react";
-
-/* Education information */
-const education = {
-  degree: "Bachelor of Technology in Computer Science and Engineering",
-  institution: "KIET Group of Institutions, Ghaziabad",
-  year: "2024 – 2028",
-  cgpa: "7.49 / 10",
-  description:
-    "Currently pursuing a Bachelor's degree in Computer Science & Engineering with a strong foundation in programming, software development, Data Structures & Algorithms, databases, and core computer science concepts.",
-};
-
 export default function Education() {
+  const education = {
+    degree: "Bachelor of Technology in Computer Science and Engineering",
+    institution: "KIET Group of Institutions, Ghaziabad",
+    duration: "2024 – 2028",
+    cgpa: "7.49 / 10",
+    coursework: [
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming (OOPs)",
+      "Database Management Systems (DBMS)",
+      "Operating Systems",
+      "Computer Networks",
+    ],
+  };
+
   return (
-    <section id="education" className="py-24 sm:py-32">
+    <section id="education" className="py-20 sm:py-28 border-t border-[#292E38]">
       <div className="mx-auto max-w-6xl section-padding">
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        {/* Section Header */}
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-xs text-[#F59E0B]">// 05</span>
+          <h2 className="text-2xl font-bold tracking-tight text-[#E8EAF0] sm:text-3xl">
             Education
           </h2>
+          <div className="h-[1px] flex-1 bg-[#292E38] ml-3" />
+        </div>
 
-          <div className="mt-3 h-1 w-12 rounded-full bg-accent" />
-        </motion.div>
+        {/* Structured Layout */}
+        <div className="mt-10 ml-2 relative pl-6 sm:pl-8 border-l border-[#292E38]">
+          {/* Amber Marker Dot */}
+          <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-[#F59E0B] ring-4 ring-[#0F1115]" />
 
-        {/* Education Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-12 max-w-2xl rounded-xl border border-border bg-surface-card p-6 sm:p-8"
-        >
-          <div className="flex items-start gap-4">
-            <div className="shrink-0 rounded-lg bg-accent-muted p-3 text-accent">
-              <GraduationCap size={24} />
-            </div>
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <h3 className="text-base sm:text-lg font-semibold text-[#E8EAF0]">
+              {education.degree}
+            </h3>
+            <span className="font-mono text-xs text-[#737A89]">{education.duration}</span>
+          </div>
 
-            <div>
-              <h3 className="text-lg font-semibold text-text-primary">
-                {education.degree}
-              </h3>
+          <div className="mt-1 flex flex-wrap items-center gap-3">
+            <span className="font-mono text-xs text-[#A7ACB8]">{education.institution}</span>
+            <span className="text-[#737A89]">·</span>
+            <span className="rounded border border-[#292E38] bg-[#151922] px-2 py-0.5 font-mono text-xs font-semibold text-[#F59E0B]">
+              CGPA: {education.cgpa}
+            </span>
+          </div>
 
-              <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-text-secondary">
-                <span className="inline-flex items-center gap-1.5">
-                  <MapPin size={14} className="text-text-muted" />
-                  {education.institution}
+          <div className="mt-5">
+            <span className="font-mono text-xs text-[#737A89] uppercase tracking-wider block mb-2">
+              Relevant Coursework &amp; Core CS:
+            </span>
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs sm:text-sm text-[#A7ACB8]">
+              {education.coursework.map((course, idx) => (
+                <span key={course} className="inline-flex items-center">
+                  <span>{course}</span>
+                  {idx < education.coursework.length - 1 && (
+                    <span className="ml-3 text-[#737A89] font-mono">·</span>
+                  )}
                 </span>
-
-                <span className="inline-flex items-center gap-1.5">
-                  <Calendar size={14} className="text-text-muted" />
-                  {education.year}
-                </span>
-              </div>
-
-              <p className="mt-3 text-sm font-medium text-accent">
-                CGPA: {education.cgpa}
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-text-secondary">
-                {education.description}
-              </p>
+              ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

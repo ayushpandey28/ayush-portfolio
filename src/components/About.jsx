@@ -1,97 +1,112 @@
-import { motion } from "framer-motion";
-import { Code2, Brain, Database, Rocket } from "lucide-react";
-
-const highlights = [
-  { icon: Code2, title: "Full Stack Development" },
-  { icon: Brain, title: "DSA & Problem Solving" },
-  { icon: Database, title: "APIs & Databases" },
-  { icon: Rocket, title: "Building Real Projects" },
-];
+import { Terminal, MapPin, GraduationCap, Briefcase, Award, Code } from "lucide-react";
 
 export default function About() {
+  const quickFacts = [
+    {
+      label: "Education",
+      value: "B.Tech, Computer Science & Engineering",
+      sub: "KIET Group of Institutions (2024 – 2028)",
+      icon: GraduationCap,
+    },
+    {
+      label: "Location",
+      value: "Ghaziabad, Uttar Pradesh, India",
+      sub: "Open to relocation & remote roles",
+      icon: MapPin,
+    },
+    {
+      label: "Core Stack",
+      value: "React · Node.js · Express · MongoDB",
+      sub: "C++, Python, SQL, REST APIs",
+      icon: Code,
+    },
+    {
+      label: "Problem Solving",
+      value: "150+ LeetCode DSA Problems",
+      sub: "Data Structures & Algorithmic complexity",
+      icon: Terminal,
+    },
+    {
+      label: "Scholarship",
+      value: "Reliance Foundation Scholar",
+      sub: "Undergraduate Scholarship recipient",
+      icon: Award,
+    },
+    {
+      label: "Status",
+      value: "Seeking SDE Internships",
+      sub: "Available to start immediately",
+      icon: Briefcase,
+    },
+  ];
+
   return (
-    <section id="about" className="py-24 sm:py-32">
+    <section id="about" className="py-20 sm:py-28 border-t border-[#292E38]">
       <div className="mx-auto max-w-6xl section-padding">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        {/* Section Header */}
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-xs text-[#F59E0B]">// 01</span>
+          <h2 className="text-2xl font-bold tracking-tight text-[#E8EAF0] sm:text-3xl">
             About Me
           </h2>
+          <div className="h-[1px] flex-1 bg-[#292E38] ml-3" />
+        </div>
 
-          <div className="mt-3 h-1 w-12 rounded-full bg-accent" />
-        </motion.div>
-
-        <div className="mt-12 grid gap-12 lg:grid-cols-5 lg:gap-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-5 text-text-secondary leading-relaxed lg:col-span-3"
-          >
+        {/* Content Layout */}
+        <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:gap-12 items-start">
+          {/* Narrative Text */}
+          <div className="lg:col-span-7 space-y-4 text-sm sm:text-base leading-relaxed text-[#A7ACB8]">
             <p>
-              I'm{" "}
-              <span className="font-medium text-text-primary">
-                Ayush Pandey
-              </span>
-              , a Computer Science and Engineering undergraduate at KIET Group
-              of Institutions with a strong interest in full-stack development
-              and software engineering.
+              I am a third-year Computer Science undergraduate at KIET Group of Institutions,
+              building full-stack software with a focus on web applications, scalable backend APIs,
+              and algorithm problem solving.
             </p>
 
             <p>
-              I work with technologies such as{" "}
-              <span className="font-medium text-text-primary">
-                React, Node.js, C++, Python, and SQL
-              </span>
-              . I enjoy building end-to-end web applications, designing REST
-              APIs, working with databases, and understanding how different
-              parts of a software system work together.
+              My development work centers around the modern JavaScript ecosystem—primarily
+              <span className="text-[#E8EAF0] font-medium"> React.js</span>,
+              <span className="text-[#E8EAF0] font-medium"> Node.js</span>,
+              <span className="text-[#E8EAF0] font-medium"> Express.js</span>, and
+              <span className="text-[#E8EAF0] font-medium"> MongoDB</span>. I enjoy designing clean REST
+              APIs, reasoning about database schema tradeoffs, and creating fast, accessible user interfaces.
             </p>
 
             <p>
-              Alongside development, I actively practice{" "}
-              <span className="font-medium text-text-primary">
-                Data Structures & Algorithms
-              </span>
-              , with 200+ problems solved on LeetCode and other competitive
-              coding platforms. I'm continuously improving my technical skills
-              through hands-on projects and practical problem solving.
+              Beyond building applications, I have a deep appreciation for foundational Computer Science.
+              I have solved <span className="text-[#E8EAF0] font-medium">150+ algorithmic problems on LeetCode</span>,
+              reinforcing principles of time and space complexity that guide how I write production code.
             </p>
 
             <p>
-              I'm currently seeking a{" "}
-              <span className="font-medium text-text-primary">
-                Software Development / Software Engineering internship
-              </span>{" "}
-              where I can contribute to real-world projects, learn from
-              experienced engineers, and grow as a software developer.
+              I am actively looking for a <span className="text-[#F59E0B] font-medium">Software Development Internship and Roles</span> where
+              I can contribute to impactful codebases, collaborate with experienced engineers, and solve
+              demanding technical problems.
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-2 gap-3 lg:col-span-2">
-            {highlights.map(({ icon: Icon, title }, i) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.4, delay: 0.15 + i * 0.08 }}
-                className="group flex flex-col items-center gap-3 rounded-xl border border-border bg-surface-card p-5 text-center transition-colors hover:border-border-hover hover:bg-surface-hover"
-              >
-                <div className="rounded-lg bg-accent-muted p-2.5 text-accent">
-                  <Icon size={20} />
-                </div>
+          {/* Quick Facts Panel */}
+          <div className="lg:col-span-5">
+            <div className="rounded-lg border border-[#292E38] bg-[#151922] p-5">
+              <div className="flex items-center justify-between border-b border-[#292E38] pb-3 mb-4">
+                <span className="font-mono text-xs font-semibold text-[#E8EAF0]">Quick Facts</span>
+                <span className="font-mono text-[11px] text-[#737A89]">profile_summary</span>
+              </div>
 
-                <span className="text-sm font-medium leading-snug">
-                  {title}
-                </span>
-              </motion.div>
-            ))}
+              <div className="space-y-4">
+                {quickFacts.map(({ label, value, sub, icon: Icon }) => (
+                  <div key={label} className="flex items-start gap-3">
+                    <div className="mt-0.5 rounded border border-[#292E38] bg-[#1B2028] p-1.5 text-[#F59E0B]">
+                      <Icon size={14} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-[11px] font-mono text-[#737A89] uppercase tracking-wider">{label}</div>
+                      <div className="text-xs sm:text-sm font-medium text-[#E8EAF0] mt-0.5">{value}</div>
+                      <div className="text-[11px] text-[#A7ACB8] mt-0.5">{sub}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

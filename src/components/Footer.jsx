@@ -33,45 +33,43 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border bg-surface-card/50">
-      <div className="mx-auto max-w-6xl section-padding py-12">
-        <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-          {/* Brand */}
-          <div className="text-center sm:text-left">
-            <p className="text-sm font-semibold text-text-primary">
-              {profile.name}
-            </p>
-
-            <p className="mt-0.5 text-xs text-text-muted">
-              {profile.role}
+    <footer className="border-t border-[#292E38] bg-[#0F1115]">
+      <div className="mx-auto max-w-6xl section-padding py-10">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          {/* Brand & Stack Info */}
+          <div>
+            <div className="flex items-center gap-2 font-mono text-sm font-semibold text-[#E8EAF0]">
+              <span className="text-[#F59E0B]">&gt;</span>
+              <span>ayush.pandey</span>
+              <span className="text-[#737A89] font-normal text-xs">// portfolio</span>
+            </div>
+            <p className="mt-1 text-xs text-[#737A89]">
+              B.Tech CSE Student &amp; Aspiring Software Development Engineer
             </p>
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-3">
-            {socialLinks.map(
-              ({ icon: Icon, href, label, external }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={external ? "_blank" : undefined}
-                  rel={external ? "noopener noreferrer" : undefined}
-                  aria-label={label}
-                  title={label}
-                  className="rounded-lg border border-border p-2 text-text-muted transition-all hover:border-border-hover hover:bg-surface-hover hover:text-text-primary"
-                >
-                  <Icon size={16} />
-                </a>
-              )
-            )}
+          <div className="flex items-center gap-2">
+            {socialLinks.map(({ icon: Icon, href, label, external }) => (
+              <a
+                key={label}
+                href={href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                aria-label={label}
+                title={label}
+                className="rounded-md border border-[#292E38] bg-[#151922] p-2 text-[#A7ACB8] transition-colors hover:border-[#F59E0B] hover:text-[#F59E0B]"
+              >
+                <Icon size={15} />
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 border-t border-border pt-6 text-center">
-          <p className="text-xs text-text-muted">
-            © {currentYear} {profile.name}. All rights reserved.
-          </p>
+        {/* Bottom meta */}
+        <div className="mt-8 border-t border-[#292E38] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#737A89] font-mono">
+          <p>© {currentYear} Ayush Pandey. All rights reserved.</p>
+          <p>Crafted with React, Vite &amp; Tailwind CSS</p>
         </div>
       </div>
     </footer>

@@ -1,98 +1,91 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e0e13" />
-      <stop offset="100%" stop-color="#14141c" />
+    <linearGradient id="trBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1115" />
+      <stop offset="100%" stop-color="#151922" />
     </linearGradient>
-    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#191923" />
-      <stop offset="100%" stop-color="#121219" />
-    </linearGradient>
-    <linearGradient id="resumeAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6366f1" />
-      <stop offset="100%" stop-color="#a855f7" />
-    </linearGradient>
-    <pattern id="grid2" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1" fill="#242432" opacity="0.6" />
+    <pattern id="trGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#252A34" stroke-width="0.5" opacity="0.4" />
     </pattern>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="450" fill="url(#bgGrad2)" />
-  <rect width="800" height="450" fill="url(#grid2)" />
-
-  <!-- Subtle glow -->
-  <circle cx="400" cy="200" r="180" fill="#a855f7" opacity="0.07" filter="blur(40px)" />
+  <rect width="800" height="450" fill="url(#trBg)" />
+  <rect width="800" height="450" fill="url(#trGrid)" />
 
   <!-- Window Container -->
-  <rect x="60" y="45" width="680" height="360" rx="12" fill="url(#cardGrad2)" stroke="#262636" stroke-width="1.5" />
+  <rect x="50" y="40" width="700" height="370" rx="8" fill="#151922" stroke="#252A34" stroke-width="1.5" />
 
   <!-- Window Header -->
-  <rect x="60" y="45" width="680" height="42" rx="12" fill="#171720" />
-  <rect x="60" y="75" width="680" height="12" fill="#171720" />
-  <line x1="60" y1="87" x2="740" y2="87" stroke="#262636" stroke-width="1" />
+  <rect x="50" y="40" width="700" height="40" rx="8" fill="#12151B" />
+  <rect x="50" y="70" width="700" height="10" fill="#12151B" />
+  <line x1="50" y1="80" x2="750" y2="80" stroke="#252A34" stroke-width="1" />
 
   <!-- Window Controls -->
-  <circle cx="84" cy="66" r="5" fill="#ef4444" opacity="0.8" />
-  <circle cx="102" cy="66" r="5" fill="#f59e0b" opacity="0.8" />
-  <circle cx="120" cy="66" r="5" fill="#10b981" opacity="0.8" />
-  <text x="400" y="70" text-anchor="middle" font-family="monospace" font-size="12" fill="#71717a">tigerresume.app - builder</text>
+  <circle cx="75" cy="60" r="4.5" fill="#F87171" opacity="0.85" />
+  <circle cx="92" cy="60" r="4.5" fill="#F59E0B" opacity="0.85" />
+  <circle cx="109" cy="60" r="4.5" fill="#22C55E" opacity="0.85" />
+  <text x="400" y="64" text-anchor="middle" font-family="monospace" font-size="12" fill="#737A89">tiger-resume.vercel.app</text>
 
-  <!-- Inner Content -->
-  <!-- Resume Layout Icon -->
-  <g transform="translate(110, 130)">
-    <rect x="0" y="0" width="70" height="85" rx="8" fill="#1e1e2c" stroke="#a855f7" stroke-width="1.5" />
-    <!-- Avatar circle -->
-    <circle cx="24" cy="24" r="8" fill="#a855f7" fill-opacity="0.3" stroke="#c084fc" stroke-width="1.2" />
-    <!-- Mini lines -->
-    <line x1="38" y1="20" x2="56" y2="20" stroke="#c084fc" stroke-width="2" stroke-linecap="round" />
-    <line x1="38" y1="28" x2="50" y2="28" stroke="#71717a" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="14" y1="42" x2="56" y2="42" stroke="#52525b" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="14" y1="52" x2="56" y2="52" stroke="#52525b" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="14" y1="62" x2="44" y2="62" stroke="#52525b" stroke-width="1.5" stroke-linecap="round" />
-    <rect x="14" y="69" width="22" height="6" rx="2" fill="#6366f1" />
+  <!-- Main Showcase Layout -->
+  <!-- Left Resume Document Preview -->
+  <g transform="translate(90, 115)">
+    <rect x="0" y="0" width="170" height="240" rx="6" fill="#1B202A" stroke="#252A34" stroke-width="1.5" />
+    <!-- Top accent bar on doc -->
+    <rect x="15" y="15" width="140" height="4" rx="2" fill="#F59E0B" />
+    <!-- Candidate name line -->
+    <rect x="15" y="28" width="80" height="8" rx="2" fill="#E8EAF0" />
+    <rect x="15" y="42" width="110" height="5" rx="1.5" fill="#737A89" />
+    <!-- Divider -->
+    <line x1="15" y1="56" x2="155" y2="56" stroke="#252A34" stroke-width="1" />
+    <!-- Section 1 -->
+    <rect x="15" y="66" width="50" height="6" rx="1.5" fill="#F59E0B" opacity="0.9" />
+    <rect x="15" y="78" width="135" height="4" rx="1" fill="#A7ACB8" />
+    <rect x="15" y="86" width="125" height="4" rx="1" fill="#737A89" />
+    <rect x="15" y="94" width="110" height="4" rx="1" fill="#737A89" />
+    <!-- Section 2 -->
+    <rect x="15" y="110" width="60" height="6" rx="1.5" fill="#F59E0B" opacity="0.9" />
+    <rect x="15" y="122" width="140" height="4" rx="1" fill="#A7ACB8" />
+    <rect x="15" y="130" width="130" height="4" rx="1" fill="#737A89" />
+    <rect x="15" y="138" width="120" height="4" rx="1" fill="#737A89" />
+    <!-- Score badge -->
+    <rect x="15" y="185" width="140" height="38" rx="4" fill="#12151B" stroke="#252A34" stroke-width="1" />
+    <text x="25" y="208" font-family="monospace" font-size="11" font-weight="600" fill="#22C55E">ATS MATCH: 94%</text>
   </g>
 
-  <!-- Project Title & Description -->
-  <text x="210" y="160" font-family="sans-serif" font-weight="700" font-size="28" fill="#f4f4f5">TigerResume</text>
-  <text x="210" y="190" font-family="sans-serif" font-size="14" fill="#a1a1aa">Full-Stack Resume Builder with Customizable Templates</text>
+  <!-- Right Side: Details & Analysis -->
+  <g transform="translate(295, 120)">
+    <text x="0" y="24" font-family="sans-serif" font-weight="700" font-size="24" fill="#E8EAF0">TigerResume</text>
+    <text x="0" y="48" font-family="sans-serif" font-size="13" fill="#A7ACB8">AI Resume Analysis &amp; ATS Optimization Platform</text>
 
-  <!-- Features Grid -->
-  <g transform="translate(110, 245)">
-    <!-- Feature 1 -->
-    <rect x="0" y="0" width="165" height="52" rx="8" fill="#161622" stroke="#262636" stroke-width="1" />
-    <circle cx="22" cy="26" r="10" fill="#222234" />
-    <path d="M18 26 L21 29 L26 23" stroke="#10b981" stroke-width="1.8" fill="none" stroke-linecap="round" />
-    <text x="40" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#e4e4e7">Templates</text>
-    <text x="40" y="38" font-family="sans-serif" font-size="10" fill="#71717a">Customizable UI</text>
+    <!-- Metrics Cards -->
+    <g transform="translate(0, 75)">
+      <rect x="0" y="0" width="125" height="56" rx="6" fill="#1B202A" stroke="#252A34" stroke-width="1" />
+      <text x="14" y="24" font-family="sans-serif" font-size="10" font-weight="600" fill="#737A89">PARSING</text>
+      <text x="14" y="44" font-family="monospace" font-size="13" font-weight="600" fill="#F59E0B">PDF / Realtime</text>
 
-    <!-- Feature 2 -->
-    <rect x="185" y="0" width="165" height="52" rx="8" fill="#161622" stroke="#262636" stroke-width="1" />
-    <circle cx="207" cy="26" r="10" fill="#222234" />
-    <path d="M203 26 L206 29 L211 23" stroke="#10b981" stroke-width="1.8" fill="none" stroke-linecap="round" />
-    <text x="225" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#e4e4e7">Express APIs</text>
-    <text x="225" y="38" font-family="sans-serif" font-size="10" fill="#71717a">Data Endpoints</text>
+      <rect x="140" y="0" width="125" height="56" rx="6" fill="#1B202A" stroke="#252A34" stroke-width="1" />
+      <text x="154" y="24" font-family="sans-serif" font-size="10" font-weight="600" fill="#737A89">STORAGE</text>
+      <text x="154" y="44" font-family="monospace" font-size="13" font-weight="600" fill="#E8EAF0">MongoDB Cloud</text>
 
-    <!-- Feature 3 -->
-    <rect x="370" y="0" width="165" height="52" rx="8" fill="#161622" stroke="#262636" stroke-width="1" />
-    <circle cx="392" cy="26" r="10" fill="#222234" />
-    <path d="M388 26 L391 29 L396 23" stroke="#10b981" stroke-width="1.8" fill="none" stroke-linecap="round" />
-    <text x="410" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#e4e4e7">MongoDB</text>
-    <text x="410" y="38" font-family="sans-serif" font-size="10" fill="#71717a">Cloud Storage</text>
-  </g>
+      <rect x="280" y="0" width="125" height="56" rx="6" fill="#1B202A" stroke="#252A34" stroke-width="1" />
+      <text x="294" y="24" font-family="sans-serif" font-size="10" font-weight="600" fill="#737A89">TEMPLATES</text>
+      <text x="294" y="44" font-family="monospace" font-size="13" font-weight="600" fill="#22C55E">3 Formats</text>
+    </g>
 
-  <!-- Bottom Tech Tags -->
-  <g transform="translate(110, 325)">
-    <rect x="0" y="0" width="70" height="24" rx="6" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.8" />
-    <text x="35" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#818cf8">React.js</text>
+    <!-- Tech Stack Row -->
+    <g transform="translate(0, 160)">
+      <rect x="0" y="0" width="65" height="26" rx="4" fill="#1B202A" stroke="#252A34" stroke-width="1" />
+      <text x="32.5" y="17" text-anchor="middle" font-family="monospace" font-size="11" fill="#A7ACB8">React</text>
 
-    <rect x="80" y="0" width="70" height="24" rx="6" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.8" />
-    <text x="115" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#818cf8">Next.js</text>
+      <rect x="75" y="0" width="75" height="26" rx="4" fill="#1B202A" stroke="#252A34" stroke-width="1" />
+      <text x="112.5" y="17" text-anchor="middle" font-family="monospace" font-size="11" fill="#A7ACB8">Node.js</text>
 
-    <rect x="160" y="0" width="80" height="24" rx="6" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.8" />
-    <text x="200" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#818cf8">Express.js</text>
+      <rect x="160" y="0" width="75" height="26" rx="4" fill="#1B202A" stroke="#252A34" stroke-width="1" />
+      <text x="197.5" y="17" text-anchor="middle" font-family="monospace" font-size="11" fill="#A7ACB8">Express</text>
 
-    <rect x="250" y="0" width="80" height="24" rx="6" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.8" />
-    <text x="290" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#818cf8">MongoDB</text>
+      <rect x="245" y="0" width="85" height="26" rx="4" fill="#1B202A" stroke="#252A34" stroke-width="1" />
+      <text x="287.5" y="17" text-anchor="middle" font-family="monospace" font-size="11" fill="#A7ACB8">MongoDB</text>
+    </g>
   </g>
 </svg>
