@@ -94,7 +94,7 @@ export default function ProjectCard({ project, index }) {
         )}
 
         {/* Action Links */}
-        <div className="mt-auto flex items-center justify-between gap-3 pt-5 border-t border-[#292E38] mt-5">
+        <div className="mt-auto flex items-center justify-between gap-3 pt-5 border-t border-[#292E38]">
           {isLink(github) ? (
             <a
               href={github}
